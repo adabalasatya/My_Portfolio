@@ -50,15 +50,15 @@ const Projects = ({ scrollToSection }) => {
       features: ['Restaurant listings', 'User authentication', 'Cart system', 'Order tracking'],
       icon: '🍕'
     },
-   {
-  title: "Referral Promotional Website",
-  tech: "React, Material-UI, API Integration, Axios",
-  link: "https://accredian-reffer-website.vercel.app/",
-  category: "frontend",
-  description: "A modern referral website with promotional features",
-  features: ["Responsive Design", "API Management", "Mobile Optimized", "Smooth Animations", "User Authentication"],
-  icon: "📧"
-}
+    {
+      title: "Referral Promotional Website",
+      tech: "React, Material-UI, API Integration, Axios",
+      link: "https://accredian-reffer-website.vercel.app/",
+      category: "frontend",
+      description: "A modern referral website with promotional features",
+      features: ["Responsive Design", "API Management", "Mobile Optimized", "Smooth Animations", "User Authentication"],
+      icon: "📧"
+    }
   ];
 
   const categories = [
@@ -178,11 +178,12 @@ const Projects = ({ scrollToSection }) => {
 
               {/* Action Button - Fixed at bottom */}
               <div className="px-6 pb-6 mt-auto">
+                {/* ensure anchor is above overlay and clickable */}
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                  className="relative z-20 w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
                 >
                   <span>View Project</span>
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -191,10 +192,12 @@ const Projects = ({ scrollToSection }) => {
                 </a>
               </div>
 
-              {/* Hover overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-2xl transition-opacity duration-500 ${
-                hoveredProject === index ? 'opacity-100' : 'opacity-0'
-              }`}></div>
+              {/* Hover overlay - non-interactive so clicks pass through */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-2xl transition-opacity duration-500 pointer-events-none ${
+                  hoveredProject === index ? 'opacity-100' : 'opacity-0'
+                }`}
+              ></div>
             </div>
           ))}
         </div>
