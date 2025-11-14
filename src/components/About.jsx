@@ -1,4 +1,5 @@
 import React from 'react';
+import DP1 from '../../assets/DP1.png'
 
 const About = ({ scrollToSection }) => {
   const experienceData = [
@@ -92,7 +93,7 @@ const About = ({ scrollToSection }) => {
               <div className="relative group">
                 <div className="absolute -inset-4 overflow-hidden bg-gray-200 rounded-full opacity-75 group-hover:opacity-100 blur transition duration-1000 group-hover:duration-200 animate-tilt"></div>
                 <img 
-                  src="/assets/DP_2.png" 
+                  src={DP1}
                   alt="Profile" 
                   className="relative w-64 h-64 rounded-full object-cover shadow-2xl border-4 border-white z-10 transform group-hover:scale-105 transition duration-300"
                 />

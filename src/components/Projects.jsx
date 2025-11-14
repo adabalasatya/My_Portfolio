@@ -2,97 +2,69 @@ import React, { useState } from 'react';
 
 const Projects = ({ scrollToSection }) => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
     {
-      title: 'Margda Workplace Company Own Prjoect (CRM + LMS Platform)',
-      tech: 'React, Tailwind CSS, JavaScript, REST APIs, Figma, Postman',
+      title: 'Margda Workplace (CRM + LMS Platform)',
+      tech: 'React, Tailwind CSS, JavaScript, REST APIs',
       link: 'https://margda-old-desgin-react-js.vercel.app/',
       category: 'professional',
-      image: '/assets/margda-workplace.jpg',
       description: 'Comprehensive CRM and LMS platform with multiple interactive modules',
-      features: [
-        'Secure login/signup with form validation',
-        'Dynamic leads management with omnichannel communication',
-        'Team creation and activity tracking',
-        'Google Calendar-like study scheduler',
-        'HR interview module with video recording',
-        'Service exchange platform for advisors',
-        'Institute management with courses and fees',
-        'Mart section for course purchases'
-      ]
+      features: ['Secure authentication', 'Leads management', 'Team tracking', 'Study scheduler', 'HR interview module'],
+      icon: '🚀'
     },
     {
-      title: 'Margda collaboration with Miraj Project (CRM + LMS Platform)',
-      tech: 'Next JS, Tailwind CSS, JavaScript, REST APIs, Figma, Postman',
+      title: 'Margda Collaboration with Miraj',
+      tech: 'Next JS, Tailwind CSS, JavaScript, REST APIs',
       link: 'https://margda-work-place-miraj-group-next.vercel.app/',
       category: 'professional',
-      image: '/assets/margda-workplace.jpg',
-      description: 'Comprehensive CRM and LMS platform with multiple interactive modules',
-      features: [
-        'Secure login/signup with form validation',
-        'Dynamic leads management with omnichannel communication',
-        'Team creation and activity tracking',
-        'Google Calendar-like study scheduler',
-        'HR interview module with video recording',
-        'Service exchange platform for advisors',
-        'Institute management with courses and fees',
-        'Mart section for course purchases'
-      ]
+      description: 'Advanced CRM and LMS platform with enhanced features',
+      features: ['Dynamic communication', 'Service exchange', 'Institute management', 'Course marketplace'],
+      icon: '💼'
     },
     {
       title: 'Little Lemon Restaurant',
-      tech: 'HTML5, CSS3, JavaScript, React',
+      tech: 'React, CSS3, JavaScript',
       link: 'https://little-lemon-restuarant-website.vercel.app/',
       category: 'frontend',
-      image: '/assets/little-lemon.jpg',
-      description: 'Modern restaurant website with responsive design and intuitive UI',
-      features: [
-        'Fully responsive across all devices',
-        'Modern React components',
-        'Clean and appealing user interface',
-        'Optimized performance',
-        'Reusable component architecture'
-      ]
+      description: 'Modern restaurant website with responsive design',
+      features: ['Fully responsive', 'Modern components', 'Clean UI', 'Performance optimized'],
+      icon: '🍋'
     },
     {
-      title: 'Portfolio Website',
-      tech: 'HTML5, CSS3, JavaScript, React JS, TailwindCSS',
-      link: 'https://portfolio-bootstrap-satya-adabalas-projects.vercel.app/',
+      title: 'My Portfolio',
+      tech: 'React, TailwindCSS, JavaScript',
+      link: 'https://my-portfolio-satya-adabala.vercel.app/',
       category: 'frontend',
-      image: '/assets/portfolio.jpg',
-      description: 'Dynamic portfolio showcasing modern web development skills',
-      features: [
-        'Bootstrap-powered responsive design',
-        'Clean layouts and bold typography',
-        'Smooth scrolling navigation',
-        'Project showcase gallery',
-        'Mobile-optimized experience'
-      ]
+      description: 'Dynamic portfolio showcasing modern web development',
+      features: ['Responsive design', 'Smooth animations', 'Project gallery', 'Mobile optimized'],
+      icon: '🌟'
     },
     {
       title: 'Suby (Swiggy Clone)',
-      tech: 'HTML, CSS, JavaScript, React, Node.js, Express.js, MongoDB',
+      tech: 'React, Node.js, MongoDB, Express',
       link: 'https://swiggy-clone-frontend-react.vercel.app/',
       category: 'frontend',
-      image: '/assets/suby.jpg',
-      description: 'Food delivery platform clone with full-stack functionality',
-      features: [
-        'Restaurant listing and menu display',
-        'User authentication and profiles',
-        'Cart and checkout system',
-        'Order tracking functionality',
-        'Admin dashboard for restaurant management'
-      ]
-    }
-    
-   
+      description: 'Food delivery platform with full-stack functionality',
+      features: ['Restaurant listings', 'User authentication', 'Cart system', 'Order tracking'],
+      icon: '🍕'
+    },
+   {
+  title: "Referral Promotional Website",
+  tech: "React, Material-UI, API Integration, Axios",
+  link: "https://accredian-reffer-website.vercel.app/",
+  category: "frontend",
+  description: "A modern referral website with promotional features",
+  features: ["Responsive Design", "API Management", "Mobile Optimized", "Smooth Animations", "User Authentication"],
+  icon: "📧"
+}
   ];
 
   const categories = [
     { id: 'all', name: 'All Projects' },
     { id: 'professional', name: 'Professional' },
-    { id: 'frontend', name: 'Personal Project' }
+    { id: 'frontend', name: 'Personal Projects' }
   ];
 
   const filteredProjects = activeFilter === 'all' 
@@ -100,30 +72,37 @@ const Projects = ({ scrollToSection }) => {
     : projects.filter(project => project.category === activeFilter);
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gradient-to-br from-purple-50 to-blue-50/30 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute top-10 right-10 w-20 h-20 bg-purple-200/20 rounded-full blur-xl"></div>
-      <div className="absolute bottom-10 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl"></div>
+    <section id="projects" className="py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50/20 relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+      <div className="absolute -top-20 -right-20 w-40 h-40 bg-blue-100/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-purple-100/30 rounded-full blur-3xl"></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-6xl mx-auto relative z-10">
+        {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-sm text-purple-600 uppercase tracking-wider font-semibold mb-2">My Work</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-gray-800 to-purple-600 bg-clip-text text-transparent">
-            Featured Projects
+          <div className="inline-flex items-center gap-2 text-sm text-blue-600 uppercase tracking-wider font-semibold mb-3 px-4 py-2 bg-blue-50 rounded-full">
+            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+            My Work
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Featured <span className="text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text">Projects</span>
           </h1>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-blue-500 mx-auto rounded-full"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            A collection of projects that showcase my skills and experience in web development
+          </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-16">
           {categories.map(category => (
             <button
               key={category.id}
               onClick={() => setActiveFilter(category.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`px-5 py-2.5 rounded-xl font-medium transition-all duration-300 border ${
                 activeFilter === category.id
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-gray-50 shadow-md'
+                  ? 'bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-500/25'
+                  : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:shadow-md'
               }`}
             >
               {category.name}
@@ -131,127 +110,111 @@ const Projects = ({ scrollToSection }) => {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        {/* Projects Grid - Equal height cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.title}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 group"
-              style={{ 
-                animationDelay: `${index * 100}ms`,
-                animation: 'fadeInUp 0.6s ease-out forwards'
-              }}
+              className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 overflow-hidden flex flex-col h-full"
+              onMouseEnter={() => setHoveredProject(index)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
-              {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-purple-100 to-blue-100 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-4xl">🚀</div>
-                </div>
-                <div className="absolute top-4 right-4">
+              {/* Project Header */}
+              <div className="p-6 pb-4">
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center text-xl mb-3">
+                    {project.icon}
+                  </div>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    project.category === 'professional' ? 'bg-green-100 text-green-600' :
-                    project.category === 'fullstack' ? 'bg-blue-100 text-blue-600' :
-                    'bg-purple-100 text-purple-600'
+                    project.category === 'professional' 
+                      ? 'bg-green-100 text-green-700' 
+                      : 'bg-blue-100 text-blue-700'
                   }`}>
-                    {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
+                    {project.category === 'professional' ? 'Pro' : 'Personal'}
                   </span>
                 </div>
-              </div>
 
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
                   {project.description}
                 </p>
+              </div>
 
-                {/* Tech Stack */}
-                <div className="mb-4">
-                  <p className="text-xs text-gray-500 font-medium mb-2">Tech Stack:</p>
-                  <div className="flex flex-wrap gap-1">
-                    {project.tech.split(', ').map(tech => (
-                      <span 
-                        key={tech}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Key Features */}
-                <div className="mb-6">
-                  <p className="text-xs text-gray-500 font-medium mb-2">Key Features:</p>
-                  <ul className="space-y-1">
-                    {project.features.slice(0, 3).map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-xs text-gray-600">
-                        <span className="w-1 h-1 bg-purple-500 rounded-full mr-2"></span>
-                        {feature}
-                      </li>
-                    ))}
-                    {project.features.length > 3 && (
-                      <li className="text-xs text-purple-600 font-medium">
-                        +{project.features.length - 3} more features
-                      </li>
-                    )}
-                  </ul>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex space-x-3">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-gradient-to-r from-purple-500 to-blue-500 text-white text-center py-3 rounded-lg font-medium hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
-                  >
-                    Live Demo
-                  </a>
-                  <button className="px-4 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 transform hover:-translate-y-0.5">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </button>
+              {/* Tech Stack */}
+              <div className="px-6 mb-4">
+                <div className="flex flex-wrap gap-1.5">
+                  {project.tech.split(', ').slice(0, 3).map(tech => (
+                    <span 
+                      key={tech}
+                      className="px-2.5 py-1 bg-gray-100 text-gray-700 rounded-lg text-xs font-medium"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                  {project.tech.split(', ').length > 3 && (
+                    <span className="px-2.5 py-1 bg-gray-100 text-gray-500 rounded-lg text-xs font-medium">
+                      +{project.tech.split(', ').length - 3}
+                    </span>
+                  )}
                 </div>
               </div>
+
+              {/* Features List - This section will grow to fill space */}
+              <div className="px-6 mb-4 flex-grow">
+                <ul className="space-y-2">
+                  {project.features.slice(0, 3).map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <svg className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Action Button - Fixed at bottom */}
+              <div className="px-6 pb-6 mt-auto">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                  <span>View Project</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Hover overlay */}
+              <div className={`absolute inset-0 bg-gradient-to-br from-blue-600/5 to-purple-600/5 rounded-2xl transition-opacity duration-500 ${
+                hoveredProject === index ? 'opacity-100' : 'opacity-0'
+              }`}></div>
             </div>
           ))}
         </div>
 
-        {/* Enhanced Arrow */}
+        {/* CTA Section */}
         <div className="text-center mt-16">
-          <button
-            onClick={() => scrollToSection('contact')}
-            className="group inline-flex flex-col items-center text-purple-600 hover:text-purple-700 transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <span className="text-sm font-medium mb-2">Get In Touch</span>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center group-hover:shadow-lg transition-all duration-300">
-              <svg className="w-4 h-4 text-white transform group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </div>
-          </button>
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-xl">
+            <h3 className="text-2xl font-bold mb-3">Like what you see?</h3>
+            <p className="text-blue-100 mb-6 max-w-md mx-auto">
+              Let's work together to bring your next project to life
+            </p>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Get In Touch
+            </button>
+          </div>
         </div>
       </div>
-
-      {/* Custom Animation */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };

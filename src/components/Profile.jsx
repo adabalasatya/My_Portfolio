@@ -1,4 +1,5 @@
 import React from 'react';
+import DP1 from "../../assets/DP.png"
 
 const Profile = ({ scrollToSection }) => {
   return (
@@ -7,7 +8,7 @@ const Profile = ({ scrollToSection }) => {
       <div className="flex-shrink-0">
         <div className="w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden bg-gray-200">
           <img 
-            src="/assets/DP.png" 
+            src={DP1}
             alt="Satya Adabala" 
             className="w-full h-full object-cover grayscale"
           />

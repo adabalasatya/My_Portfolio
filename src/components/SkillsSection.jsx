@@ -5,28 +5,28 @@ const SkillsSection = ({ scrollToSection }) => {
     frontend: [
       { name: "HTML", level: "Experienced", icon: "🔷" },
       { name: "CSS", level: "Experienced", icon: "🎨" },
-      { name: "Bootstrap CSS", level: "Intermediate", icon: "⚡" },
-      { name: "Tailwind CSS", level: "Intermediate", icon: "💨" },
-      { name: "MaterialUI", level: "Intermediate", icon: "📦" },
-      { name: "ChakraUI", level: "Intermediate", icon: "⚡" },
-      { name: "SASS", level: "Intermediate", icon: "💎" },
-      { name: "JavaScript", level: "Intermediate", icon: "🟨" },
-      { name: "React JS", level: "Intermediate", icon: "⚛️" },
-      { name: "Next JS", level: "Intermediate", icon: "▲" },
-      { name: "Vite JS", level: "Intermediate", icon: "⚡" },
-      { name: "UX & UI Design", level: "Intermediate", icon: "🎯" }
+      { name: "Bootstrap CSS", level: "Experienced", icon: "⚡" },
+      { name: "Tailwind CSS", level: "Experienced", icon: "💨" },
+      { name: "MaterialUI", level: "Experienced", icon: "⚡ " },
+      { name: "ChakraUI", level: "Experienced", icon: "⚡" },
+      { name: "SASS", level: "Experienced", icon: "💎" },
+      { name: "JavaScript", level: "Experienced", icon: "🟨" },
+      { name: "React JS", level: "Experienced", icon: "⚛️" },
+      { name: "Next JS", level: "Experienced", icon: "▲" },
+      { name: "Vite JS", level: "Experienced", icon: "⚡" },
+      { name: "UX & UI Design", level: "Experienced", icon: "🎯" }
     ],
     backend: [
-      { name: "Version Control", level: "Intermediate", icon: "📚" },
+      { name: "Version Control", level: "Experienced", icon: "📚" },
       { name: "Node JS", level: "Basic", icon: "🟢" },
-      { name: "Express JS", level: "Intermediate", icon: "🚂" },
-      { name: "Mongo DB", level: "Intermediate", icon: "🍃" },
-      { name: "State Management", level: "Intermediate", icon: "🔄" },
-      { name: "APIs", level: "Intermediate", icon: "🔗" },
+      { name: "Express JS", level: "Basic", icon: "🚂" },
+      { name: "Mongo DB", level: "Basic", icon: "🍃" },
+      { name: "State Management", level: "Experienced", icon: "🔄" },
+      { name: "APIs", level: "Experienced", icon: "🔗" },
       { name: "Database Management", level: "Intermediate", icon: "🗄️" },
       { name: "Middleware", level: "Intermediate", icon: "⚙️" },
-      { name: "Git & GitHub", level: "Intermediate", icon: "🐙" },
-      { name: "Testing Debugging", level: "Intermediate", icon: "🐛" }
+      { name: "Git & GitHub", level: "Experienced", icon: "🐙" },
+      { name: "Testing Debugging", level: "Experienced", icon: "🐛" }
     ]
   };
 
