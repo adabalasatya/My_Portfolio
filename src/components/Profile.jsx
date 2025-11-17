@@ -1,5 +1,6 @@
 import React from 'react';
 import DP1 from "../../assets/DP.png"
+import Resume from "../../assets/Resume.pdf"
 
 const Profile = ({ scrollToSection }) => {
   return (
@@ -28,7 +29,7 @@ const Profile = ({ scrollToSection }) => {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8 justify-center md:justify-start">
           <a
-            href="/assets/Resume.pdf"
+            href={Resume}
             download
             className="px-8 py-3 border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition font-medium text-center"
           >
