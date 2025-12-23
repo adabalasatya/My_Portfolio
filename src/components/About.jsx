@@ -44,21 +44,21 @@ const About = ({ scrollToSection }) => {
       institution: "B.V.C Engineering College",
       location: "Odalarevu",
       score: "CGPA: 6.3",
-      period: "2020 - 2024"
+      period: ""
     },
     {
       degree: "Higher Secondary (Intermediate)",
       institution: "Narayana Junior College",
       location: "Razole",
       score: "Percentage: 64%",
-      period: "2018 - 2020"
+      period: ""
     },
     {
       degree: "High School",
       institution: "Z.P.H School",
       location: "Kesanapalli",
       score: "CGPA: 9.5",
-      period: "2017 - 2018"
+      period: ""
     }
   ];
 
