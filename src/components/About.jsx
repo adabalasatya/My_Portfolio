@@ -6,7 +6,7 @@ const About = ({ scrollToSection }) => {
     {
       title: "Frontend Developer (Intern)",
       company: "Remote",
-      period: "Jan 2025 – Jul 2025",
+      period: "Jan 2025 – Oct 2025",
       achievements: [
         "Architected and developed scalable, high-performance frontend components for CRM and LMS platforms using ReactJS and Tailwind CSS",
         "Leveraged React Hooks (useState, useEffect, useContext) for optimized state management, component reusability, and lifecycle handling",
