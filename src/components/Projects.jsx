@@ -6,18 +6,9 @@ const Projects = ({ scrollToSection }) => {
 
   const projects = [
     {
-      title: 'Margda Workplace (CRM + LMS Platform)',
-      tech: 'React, Tailwind CSS, JavaScript, REST APIs',
-      link: 'https://margda-old-desgin-react-js.vercel.app/',
-      category: 'professional',
-      description: 'Comprehensive CRM and LMS platform with multiple interactive modules',
-      features: ['Secure authentication', 'Leads management', 'Team tracking', 'Study scheduler', 'HR interview module'],
-      icon: '🚀'
-    },
-    {
-      title: 'Margda Collaboration with Miraj',
+      title: 'Margda Collaboration with Miraj (CRM + LMS Platform)',
       tech: 'Next JS, Tailwind CSS, JavaScript, REST APIs',
-      link: 'https://margda-work-place-miraj-group-next.vercel.app/',
+      link: 'https://margda-with-miraj-next-js-crm-lms.vercel.app/',
       category: 'professional',
       description: 'Advanced CRM and LMS platform with enhanced features',
       features: ['Dynamic communication', 'Service exchange', 'Institute management', 'Course marketplace'],
@@ -32,14 +23,14 @@ const Projects = ({ scrollToSection }) => {
       features: ['Fully responsive', 'Modern components', 'Clean UI', 'Performance optimized'],
       icon: '🍋'
     },
-    {
-      title: 'My Portfolio',
-      tech: 'React, TailwindCSS, JavaScript',
-      link: 'https://my-portfolio-satya-adabala.vercel.app/',
-      category: 'frontend',
-      description: 'Dynamic portfolio showcasing modern web development',
-      features: ['Responsive design', 'Smooth animations', 'Project gallery', 'Mobile optimized'],
-      icon: '🌟'
+        {
+      title: 'Margda Workplace (CRM + LMS Platform)',
+      tech: 'React, Tailwind CSS, JavaScript, REST APIs',
+      link: 'https://margda-old-desgin-react-js.vercel.app/',
+      category: 'professional',
+      description: 'Comprehensive CRM and LMS platform with multiple interactive modules',
+      features: ['Secure authentication', 'Leads management', 'Team tracking', 'Study scheduler', 'HR interview module'],
+      icon: '🚀'
     },
     {
       title: 'Suby (Swiggy Clone)',
