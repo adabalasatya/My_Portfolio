@@ -13,7 +13,7 @@ const Contact = () => {
           <div className="flex items-center gap-4">
             <img src={EmailIcon} alt="Email" className="w-10 h-10" />
             <a href="mailto:Adabala1Satya@gmail.com" className="text-lg text-blue-600 hover:underline">
-              Adabala1Satya@gmail.com
+              Satya1Adabala@gmail.com
             </a>
           </div>
           <div className="flex items-center gap-4">
