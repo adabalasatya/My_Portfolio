@@ -1,16 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #111;
+  background: #fff;
+}
+
+.font-serif {
+  font-family: 'Instrument Serif', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: #111;
+  color: #fff;
+}
 
 @layer components {
   .btn {
     @apply px-6 py-2 rounded-full font-medium transition-all duration-300;
   }
   .btn-color-1 {
-    @apply bg-blue-600 text-white hover:bg-blue-700;
+    @apply bg-black text-white hover:bg-gray-800;
   }
   .btn-color-2 {
-    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+    @apply border-2 border-black text-black hover:bg-black hover:text-white;
   }
   .icon {
     @apply w-8 h-8 cursor-pointer transition-transform hover:scale-110;

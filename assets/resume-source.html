@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Satya Adabala — Resume</title>
+<style>
+  @page { size: A4; margin: 12mm 13mm; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: "Charter", "Georgia", "Times New Roman", serif;
+    font-size: 8.8pt;
+    line-height: 1.26;
+    color: #111;
+  }
+  a { color: #111; text-decoration: none; }
+
+  header { text-align: center; margin-bottom: 9px; }
+  h1 {
+    font-size: 21pt;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin: 0 0 3px;
+  }
+  .role {
+    font-size: 9.6pt;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  .contact { font-size: 8.7pt; color: #222; }
+  .contact span.sep { color: #999; padding: 0 5px; }
+  .contact a { border-bottom: 0.4px solid #bbb; }
+
+  h2 {
+    font-size: 9.6pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 11px 0 5px;
+    padding-bottom: 2px;
+    border-bottom: 0.9px solid #111;
+  }
+
+  .job { margin-bottom: 7px; }
+  .job:last-child { margin-bottom: 0; }
+  .jobhead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
+  .jobtitle { font-weight: 700; font-size: 9.8pt; }
+  .company { font-style: italic; color: #333; }
+  .period { font-size: 8.6pt; color: #444; white-space: nowrap; }
+
+  ul { margin: 3px 0 0; padding-left: 14px; }
+  li { margin-bottom: 1.7px; text-align: justify; }
+  li::marker { font-size: 7.5pt; }
+
+  .skills p { margin: 0 0 2.5px; }
+  .skills b { font-weight: 700; }
+
+  .proj { margin-bottom: 5px; }
+  .projhead { font-weight: 700; }
+  .stack { font-style: italic; color: #444; font-size: 8.7pt; }
+  .link { font-size: 8.4pt; color: #444; }
+
+  .edu { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 2px; }
+  .edu .where { color: #444; font-size: 8.7pt; white-space: nowrap; }
+
+  .avoid-break { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Satya Adabala</h1>
+  <div class="role">Full-Stack Developer &nbsp;·&nbsp; React Native &nbsp;·&nbsp; Spring Boot &nbsp;·&nbsp; Next.js</div>
+  <div class="contact">
+    <a href="mailto:Satya1Adabala@gmail.com">Satya1Adabala@gmail.com</a><span class="sep">|</span>+91 96767 36647<span class="sep">|</span>India · Remote-friendly
+    <br>
+    <a href="https://github.com/adabalasatya">github.com/adabalasatya</a><span class="sep">|</span><a href="https://www.linkedin.com/in/satya1adabala/">linkedin.com/in/satya1adabala</a>
+  </div>
+</header>
+
+<h2>Summary</h2>
+<p style="margin:0; text-align: justify;">
+Full-stack developer building production mobile and web products end-to-end — React Native (Expo) clients, Java Spring Boot REST APIs, and Next.js admin panels and marketing sites. Over three months at AppSpace I shipped ten production releases across food-tech, spiritual-tech, wellness, fintech, sales-CRM and productivity verticals, covering 120+ REST endpoints and five Spring Boot backends. Comfortable owning the full slice: schema and Flyway migrations, JWT/OTP auth and RBAC, AI provider integration with fallback chains, in-app purchases, and the client-side design system on top.
+</p>
+
+<h2>Work Experience</h2>
+
+<div class="job">
+  <div class="jobhead">
+    <div><span class="jobtitle">Full-Stack Developer</span> — <span class="company">Techub · ImpactSuite.AI (AppSpace)</span></div>
+    <div class="period">Mar 2026 – Present</div>
+  </div>
+  <ul>
+    <li>Shipped <b>10 production releases end-to-end in 3 months</b> — 6 full-stack mobile apps (React Native + Spring Boot + Next.js admin panels) and 4 Next.js marketing sites — across food-tech, spiritual-tech, wellness, fintech, sales-CRM and productivity verticals.</li>
+    <li>Built <b>120+ REST endpoints across 5 Spring Boot 3.x backends</b> (Java 17 &amp; 21) on a layered Controller→Service→Repository→Mapper architecture, over MySQL 8 schemas with Flyway migrations, JPA/Hibernate entities, soft deletes, audit columns and 15-char public unique-key identifiers.</li>
+    <li>Delivered ~65 mobile screens across React Native + Expo (SDK 54/55) apps with offline-first design, biometric authentication, push notifications and in-app purchase subscriptions.</li>
+    <li>Integrated <b>5 AI/ML providers</b> (OpenAI GPT-4o, Google Gemini 2.5 Flash, Groq Llama 3.3 70B, Sarvam AI, custom OpenCV OCR) with multi-provider fallback chains for resilience.</li>
+    <li>Engineered Velocity CRM's <b>voice-to-structured-data pipeline</b> — Sarvam AI transcribes a sales agent's spoken daily report and Gemini 2.5 Flash parses the free-form transcript into typed CRM metrics, per-metric commentary and a summary, including bilingual English/Hindi spelled-out number resolution for Indian field-sales users.</li>
+    <li>Built <b>AI receipt scanning</b> for the expense tracker — a Gemini vision pipeline turning a photographed bill or PDF into strict structured JSON (vendor, invoice date, tax, totals, line items) that auto-fills the expense form — backed by dynamic JPA Criteria Specification filtering, duplicate-bill detection and CSV export.</li>
+    <li>Implemented <b>end-to-end AES-256-GCM encryption</b> with PIN-derived keys for Talk2Diary — the server stores only ciphertext (IV + auth tag) and never sees plaintext journal entries.</li>
+    <li>Implemented <b>role-based access control</b> (Admin / Manager / Agent) with Spring Security, gating both API endpoints and distinct in-app navigation stacks, over a timeline-audited reporting domain with a read-optimised database view for aggregate queries.</li>
+    <li>Built localization for 11 Indian languages via Sarvam Saaras v3 voice STT plus 6-language React Native i18n UI translations; set up Expo Geofencing for real-time darshan-arrival notifications.</li>
+    <li>Integrated Apple StoreKit 2 and Google Play Billing with backend signed-JWS receipt verification, including TestFlight ↔ Production environment handling.</li>
+    <li>Built <b>5 Next.js 16 admin dashboards</b> (App Router, Server Components, Server Actions, Turbopack) with HttpOnly-cookie JWT auth, user CRUD, plan management and analytics views.</li>
+    <li>Shipped <b>4 Next.js 16 marketing and compliance sites</b> (React 19, Tailwind v4, Framer Motion) totalling 20+ static-rendered pages — per-route typed Metadata API SEO, flash-free pre-paint dark/light theming, route-level Suspense skeleton loaders and theme-aware screenshot/video media.</li>
+  </ul>
+</div>
+
+<div class="job avoid-break">
+  <div class="jobhead">
+    <div><span class="jobtitle">Frontend Developer (Intern)</span> — <span class="company">Remote</span></div>
+    <div class="period">Jan 2025 – Oct 2025</div>
+  </div>
+  <ul>
+    <li>Architected scalable, high-performance frontend components for CRM and LMS platforms using ReactJS and Tailwind CSS.</li>
+    <li>Leveraged React Hooks (useState, useEffect, useContext) for optimized state management, component reusability and lifecycle handling.</li>
+    <li>Delivered key business modules — Leads, Study Scheduler, HR Interviews, Service Exchange — improving overall workflow efficiency.</li>
+    <li>Built interactive, data-driven dashboards, calendars and dynamic forms supporting real-time updates and user feedback.</li>
+    <li>Integrated RESTful APIs in collaboration with backend teams via Figma and Postman, aligning design with functionality.</li>
+    <li>Integrated omnichannel communication tools (Email, SMS, WhatsApp, Calls, Meets) directly within the CRM interface.</li>
+    <li>Contributed to Agile cycles through code reviews, sprint planning and continuous UI/UX refinements using GitHub.</li>
+  </ul>
+</div>
+
+<div class="job avoid-break">
+  <div class="jobhead">
+    <div><span class="jobtitle">Frontend Developer (Intern)</span> — <span class="company">Remote</span></div>
+    <div class="period">May 2024 – Nov 2024</div>
+  </div>
+  <ul>
+    <li>Provided ongoing frontend support and maintenance for multiple web projects built with ReactJS and Tailwind CSS.</li>
+    <li>Identified, debugged and resolved UI and functional issues across applications; refactored and modularized legacy components for readability, accessibility and cross-browser compatibility.</li>
+    <li>Collaborated cross-functionally to reproduce, document and fix bugs reported by QA or end users.</li>
+    <li>Worked closely with designers via Figma to align frontend changes with updated design specifications.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+<div class="skills">
+  <p><b>Languages:</b> TypeScript, JavaScript, Java 17/21, Python, SQL</p>
+  <p><b>Frontend &amp; Mobile:</b> React, Next.js 16 (App Router, Server Components), React Native, Expo SDK 54/55, Tailwind CSS 4, Framer Motion, Reanimated, Zustand, React Navigation</p>
+  <p><b>Backend &amp; Database:</b> Spring Boot 3.x, Spring Security, Spring Data JPA, Spring WebFlux, JWT (JJWT), MySQL 8, Supabase (Postgres / RLS), Flyway, Maven, Caffeine Cache, OpenCV, REST APIs</p>
+  <p><b>AI / Auth / Integrations:</b> OpenAI GPT-4o, Google Gemini 2.5 Flash, Groq (Llama 3.3), Sarvam AI STT, multi-provider fallback chains, Apple StoreKit 2, Google Play Billing, Twilio / SMSCountry OTP, Google OAuth, Apple Sign-In, Expo Push / FCM / APNs</p>
+  <p><b>Security &amp; Tooling:</b> AES-256-GCM E2E encryption, PIN-derived keys, biometric auth, HttpOnly-cookie JWT, RBAC, rate limiting, CORS, soft deletes + audit columns, Docker / Compose, OpenAPI / Swagger, Vitest + React Testing Library, Git &amp; GitHub</p>
+</div>
+
+<h2>Selected Projects</h2>
+
+<div class="proj">
+  <div class="projhead">CheckEat — AI Food Nutrition Scanner <span class="stack">· React Native, Spring Boot, Next.js, MySQL, multi-provider AI</span></div>
+  <ul>
+    <li>Personalized food-label scanner scoring packaged food against a user's health profile (allergies, diabetes, pregnancy, RDA targets) using ICMR-NIN nutrition standards and FSSAI additive safety data.</li>
+    <li>17-screen Expo app with 13-step health onboarding; 22 REST endpoints with 3-provider AI fallback (Gemini, Groq, GPT-4o); OpenCV background removal, Twilio OTP, StoreKit / Play Billing; Next.js 16 admin panel with HttpOnly-cookie JWT.</li>
+  </ul>
+</div>
+
+<div class="proj">
+  <div class="projhead">Velocity CRM — Voice-Driven Sales Activity Tracking <span class="stack">· React Native (Expo), TypeScript, Spring Boot, Java 21, MySQL, Sarvam AI, Gemini</span></div>
+  <ul>
+    <li>Sales CRM where agents speak their daily report: Sarvam AI transcribes and Gemini 2.5 Flash parses the free-form speech into structured metrics (call attempts, answered, interested, follow-ups, rejections), per-metric commentary and a summary — collapsing a multi-field form into one spoken sentence.</li>
+    <li>~10.7K LOC Expo client + layered Spring Boot / Java 21 API with 12 Flyway migrations; three-tier RBAC (Admin / Manager / Agent), JWT + SMS-OTP auth, period-filtered analytics on custom SVG charts with no charting dependency.</li>
+  </ul>
+</div>
+
+<div class="proj">
+  <div class="projhead">AI Receipt &amp; Expense Tracker <span class="stack">· React Native (Expo), TypeScript, Spring Boot 3, Java 21, MySQL, Gemini</span></div>
+  <ul>
+    <li>Cross-platform expense manager: users photograph a bill (image or PDF) and a Gemini vision pipeline returns strict structured JSON — vendor, invoice number/date, total, tax, currency, payment method, suggested category and itemised line items — auto-populating the expense form.</li>
+    <li>~10K LOC Expo client + ~3.8K LOC Spring Boot API; dual-mode auth (password + SMS OTP) with JWT access/refresh; dynamic JPA Criteria Specification filtering with pagination; duplicate-bill detection; CSV export; multi-ledger SVG analytics; Dockerised with OpenAPI docs.</li>
+  </ul>
+</div>
+
+<div class="proj">
+  <div class="projhead">Talk2Diary — Privacy-First Voice AI Journal <span class="stack">· React Native, Spring Boot (Java 21), Next.js, AES-256-GCM</span></div>
+  <ul>
+    <li>Voice-first journaling app: entries are spoken, transcribed, mood-analyzed by AI and stored end-to-end encrypted — the server sees only ciphertext, IV and auth tag.</li>
+    <li>28-screen Expo SDK 55 app with biometric + PIN gate, PIN-derived AES-256-GCM keys, 11-language Sarvam Saaras v3 STT, GPT-4o mood analysis, and StoreKit 2 with Apple App Store Server API JWS verification.</li>
+  </ul>
+</div>
+
+<div class="proj">
+  <div class="projhead">DarshanMitra — Hindu Pilgrimage Platform <span class="stack">· React Native, Spring Boot WebFlux, Next.js, MySQL, geofencing</span></div>
+  <ul>
+    <li>Plan-Pray-Preserve app for temple pilgrims — itinerary planning, group trips with invite codes, location-based darshan alerts and AI spiritual guidance in 6 Indian languages.</li>
+    <li>20-screen app with React Native Maps + Expo Geofencing; 57 REST endpoints, 23 JPA entities, 15 Flyway migrations; Sarvam AI voice STT for 22 Indian languages; 3-provider AI chat fallback.</li>
+  </ul>
+</div>
+
+<div class="proj">
+  <div class="projhead">NodesMap — Offline-First Notes &amp; Productivity Workspace <span class="stack">· Next.js 16, React 19, TypeScript, Supabase, Vitest</span> <span class="link">— nodesmap.vercel.app</span></div>
+  <ul>
+    <li>~13K LOC TypeScript workspace with nested folders, a custom rich-text/markdown editor, drag-and-drop organisation, daily planner, Pomodoro timer and a radial SVG mind-map.</li>
+    <li>Offline-first architecture on a 1,200-line typed useReducer store with 40+ discriminated-union actions and a field-level remote merge reconciling Supabase rows with local-only data; email + Google OAuth (manual PKCE exchange) with per-user row-level security; optimised recursive folder analytics from O(n²) to a single cycle-safe O(folders + files) traversal; 369 Vitest / RTL tests.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="edu">
+  <div><b>B.Tech, Electronics and Communication Engineering</b> — B.V.C Engineering College (CGPA 6.3)</div>
+  <div class="where">Odalarevu</div>
+</div>
+<div class="edu">
+  <div><b>Higher Secondary (Intermediate)</b> — Narayana Junior College (64%)</div>
+  <div class="where">Razole</div>
+</div>
+<div class="edu">
+  <div><b>High School</b> — Z.P.H School (CGPA 9.5)</div>
+  <div class="where">Kesanapalli</div>
+</div>
+
+<h2>Certifications</h2>
+<p style="margin:0;">Meta Front-End Developer Professional Certificate — Coursera, 2024</p>
+
+</body>
+</html>
